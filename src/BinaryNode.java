@@ -106,6 +106,7 @@ class BinaryNode<T>
     * prints (using post-order traversal) all nodes of the subtree rooted at "this" node */
    public void postorderTraverse_binaryNodeMethod()
    {
+      return;
    }
    
    /**-------------------------------------------------------------------- 
@@ -115,7 +116,7 @@ class BinaryNode<T>
    @return  The height of the subtree rooted at "this" node. */
    public int getHeight_binaryNodeMethod()
    {  
-	   return 0;
+      return 0;
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
