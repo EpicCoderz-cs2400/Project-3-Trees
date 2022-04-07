@@ -37,35 +37,27 @@ public class UnitTesting {
 
 
     //Creating trees for testing
-    BinaryTree<String> noTree = new BinaryTree<>();
-    BinaryTree<String> bTree = new BinaryTree<>("B");
-    BinaryTree<String> cTree = new BinaryTree<>("C");
-    BinaryTree<String> dTree = new BinaryTree<>("D");
-    BinaryTree<String> eTree = new BinaryTree<>("E");
-    BinaryTree<String> fTree = new BinaryTree<>("F");
-    BinaryTree<String> gTree = new BinaryTree<>("G");
-
-    BinaryTree<String> treeCase1 = noTree;
+    BinaryTree<String> treeCase1 = new BinaryTree<>();
     BinaryTree<String> treeCase2 = new BinaryTree<>("A");
-    BinaryTree<String> treeCase3 = new BinaryTree<>("A",bTree, null);
-    BinaryTree<String> treeCase4 = new BinaryTree<>("A",null, cTree);
-    BinaryTree<String> treeCase5 = new BinaryTree<>("A", bTree, cTree);
+    BinaryTree<String> treeCase3 = new BinaryTree<>("A",new BinaryTree<>("B"), null);
+    BinaryTree<String> treeCase4 = new BinaryTree<>("A",null, new BinaryTree<>("C"));
+    BinaryTree<String> treeCase5 = new BinaryTree<>("A", new BinaryTree<>("B"), new BinaryTree<>("C"));
 
-    BinaryTree<String> treeCase6 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, null), cTree);
-    BinaryTree<String> treeCase7 = new BinaryTree<>("A", new BinaryTree<>("B", null, eTree), cTree);
-    BinaryTree<String> treeCase8 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, eTree), cTree);
-    BinaryTree<String> treeCase9 = new BinaryTree<>("A", bTree, new BinaryTree<>("C", fTree, null));
-    BinaryTree<String> treeCase10 = new BinaryTree<>("A", bTree, new BinaryTree<>("C", null, gTree));
-    BinaryTree<String> treeCase11 = new BinaryTree<>("A",  bTree, new BinaryTree<>("C", fTree, gTree));
-    BinaryTree<String> treeCase12 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, null), new BinaryTree<>("C", fTree, null));
-    BinaryTree<String> treeCase13 = new BinaryTree<>("A", new BinaryTree<>("B", null, eTree), new BinaryTree<>("C", null, gTree));
-    BinaryTree<String> treeCase14 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, null), new BinaryTree<>("C", null, gTree));
-    BinaryTree<String> treeCase15 = new BinaryTree<>("A", new BinaryTree<>("B", null, eTree), new BinaryTree<>("C", fTree, null));
-    BinaryTree<String> treeCase16 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, eTree), new BinaryTree<>("C", fTree, null));
-    BinaryTree<String> treeCase17 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, eTree), new BinaryTree<>("C", null, gTree));
-    BinaryTree<String> treeCase18 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, null), new BinaryTree<>("C", fTree, gTree));
-    BinaryTree<String> treeCase19 = new BinaryTree<>("A", new BinaryTree<>("B", null, eTree), new BinaryTree<>("C", fTree, gTree));
-    BinaryTree<String> treeCase20 = new BinaryTree<>("A", new BinaryTree<>("B", dTree, eTree), new BinaryTree<>("C", fTree, gTree));
+    BinaryTree<String> treeCase6 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), null), new BinaryTree<>("C"));
+    BinaryTree<String> treeCase7 = new BinaryTree<>("A", new BinaryTree<>("B", null, new BinaryTree<>("E")), new BinaryTree<>("C"));
+    BinaryTree<String> treeCase8 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), new BinaryTree<>("E")), new BinaryTree<>("C"));
+    BinaryTree<String> treeCase9 = new BinaryTree<>("A", new BinaryTree<>("B"), new BinaryTree<>("C", new BinaryTree<>("F"), null));
+    BinaryTree<String> treeCase10 = new BinaryTree<>("A", new BinaryTree<>("B"), new BinaryTree<>("C", null, new BinaryTree<>("G")));
+    BinaryTree<String> treeCase11 = new BinaryTree<>("A",  new BinaryTree<>("B"), new BinaryTree<>("C", new BinaryTree<>("F"), new BinaryTree<>("G")));
+    BinaryTree<String> treeCase12 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), null), new BinaryTree<>("C", new BinaryTree<>("F"), null));
+    BinaryTree<String> treeCase13 = new BinaryTree<>("A", new BinaryTree<>("B", null, new BinaryTree<>("E")), new BinaryTree<>("C", null, new BinaryTree<>("G")));
+    BinaryTree<String> treeCase14 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), null), new BinaryTree<>("C", null, new BinaryTree<>("G")));
+    BinaryTree<String> treeCase15 = new BinaryTree<>("A", new BinaryTree<>("B", null, new BinaryTree<>("E")), new BinaryTree<>("C", new BinaryTree<>("F"), null));
+    BinaryTree<String> treeCase16 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), new BinaryTree<>("E")), new BinaryTree<>("C", new BinaryTree<>("F"), null));
+    BinaryTree<String> treeCase17 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), new BinaryTree<>("E")), new BinaryTree<>("C", null, new BinaryTree<>("G")));
+    BinaryTree<String> treeCase18 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), null), new BinaryTree<>("C", new BinaryTree<>("F"), new BinaryTree<>("G")));
+    BinaryTree<String> treeCase19 = new BinaryTree<>("A", new BinaryTree<>("B", null, new BinaryTree<>("E")), new BinaryTree<>("C", new BinaryTree<>("F"), new BinaryTree<>("G")));
+    BinaryTree<String> treeCase20 = new BinaryTree<>("A", new BinaryTree<>("B", new BinaryTree<>("D"), new BinaryTree<>("E")), new BinaryTree<>("C", new BinaryTree<>("F"), new BinaryTree<>("G")));
 
 
     //Taverse tests
@@ -115,6 +107,7 @@ public class UnitTesting {
 
     @Test
     public void testTaverseCase5() {
+        treeCase5.postorderTraverse();
         //Create printstream to catch output
         ByteArrayOutputStream catcherStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(catcherStream));
@@ -187,7 +180,7 @@ public class UnitTesting {
 
         treeCase11.postorderTraverse();
 
-        assertEquals("B F G C A", catcherStream.toString());
+        assertEquals("B F G C A ", catcherStream.toString());
     }
 
     @Test
@@ -275,7 +268,7 @@ public class UnitTesting {
 
         treeCase19.postorderTraverse();
 
-        assertEquals("E B F G C A", catcherStream.toString());
+        assertEquals("E B F G C A ", catcherStream.toString());
     }
 
     @Test
