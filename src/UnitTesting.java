@@ -1,5 +1,5 @@
 /*
-    Class for Junit testing. Still needs to import JUnit packages to work.
+    Class for Junit testing.
 */
 import static org.junit.Assert.assertEquals;
 
