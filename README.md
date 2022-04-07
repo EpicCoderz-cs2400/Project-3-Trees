@@ -1,5 +1,6 @@
-Project 3 Trees 
+# Project 3 Trees 
 
-Adrian Caballero 
-Michael Smith 
-Corey Bangi
+Adrian Caballero   
+Michael Smith   
+Corey Bangi  
+Demo video: https://www.wevideo.com/view/2636431394
