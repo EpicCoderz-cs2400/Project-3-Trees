@@ -47,8 +47,10 @@ public class UnitTesting {
 	} // end createTree
 
 
+    //Case 0) bad input
     //Unit Cases of trees up to height < 3 (simple cases):
     //Case 1) Empty Tree
+    //Taverse test
     @Test
     public void testTreeCase1Traverse() {
         //Create tree
@@ -61,6 +63,20 @@ public class UnitTesting {
         emptyTree.postorderTraverse();
 
         assertEquals("", catcherStream.toString());
+    }
+
+    //Height test
+    @Test
+    public void testTreeCase1Height(){
+        BinaryTree<String> emptyTree = new BinaryTree<>();
+        assertEquals(0, emptyTree.getHeight_callBinaryNodeMethod());
+    }
+
+    //Number of nodes test
+    @Test
+    public void testTreeCase1Nodes() {
+        BinaryTree<String> emptyTree = new BinaryTree<>();
+        assertEquals(0, emptyTree.getNumberOfNodes());
     }
 
     //Case 2) Tree with no children
