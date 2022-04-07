@@ -174,20 +174,6 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       return 1+(getNumberOfNodes(node.getLeftChild())+getNumberOfNodes(node.getRightChild()));
 
    } // end getNumberOfNodes
-
-   public int getHeight_binaryNodeMethod(BinaryNode node)
-{
-   if(node==null)
-   return 0;
-   return 1+Math.max(getHeight_binaryNodeMethod(node.left)
-   getHeight_binaryNodeMethod(node.right));
-}
-   public int getHeight_callBinaryNodeMethod()
-{
-   return getHeight_binaryNodeMethod(root);
-}
-   public void postorderTraverse(BinaryNode root)
-{
    
    /** The following calls getNumberOfNodes_binaryNodeMethod() which is a recursive binaryNode class method
     * Counts the nodes in the "whole" tree
