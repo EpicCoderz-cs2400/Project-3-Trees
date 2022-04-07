@@ -79,7 +79,9 @@ public class UnitTesting {
         assertEquals(0, emptyTree.getNumberOfNodes());
     }
 
+
     //Case 2) Tree with no children
+    //Traverse Test
     @Test
     public void testTreeCase2Traverse() {
         //create tree
@@ -93,6 +95,21 @@ public class UnitTesting {
 
         assertEquals("A ", catcherStream.toString());
     }
+
+    //Height test
+    @Test
+    public void testTreeCase2Height(){
+        BinaryTree<String> treeCase2 = new BinaryTree<>("A");
+        assertEquals(1, treeCase2.getHeight());
+    }
+
+    //Number of nodes test
+    @Test
+    public void testTreeCase2Nodes(){
+        BinaryTree<String> treeCase2 = new BinaryTree<>("A");
+        assertEquals(1, treeCase2.getNumberOfNodes());
+    }
+
 
     //Case 3) Tree with only left child
     @Test
@@ -112,6 +129,22 @@ public class UnitTesting {
         assertEquals("B A ", catcherStream.toString());
     }
 
+    //Height test
+    @Test
+    public void testTreeCase3Height(){
+        BinaryTree<String>  bTree = new BinaryTree<>("B");
+        BinaryTree<String> treeCase3 = new BinaryTree<>("A", bTree, null);
+        assertEquals(2, treeCase3.getHeight());
+    }
+
+    //Number of nodes test
+    @Test
+    public void testTreeCase3Nodes(){
+        BinaryTree<String>  bTree = new BinaryTree<>("B");
+        BinaryTree<String> treeCase3 = new BinaryTree<>("A", bTree, null);
+        assertEquals(2, treeCase3.getNumberOfNodes());
+    }
+    
     //Case 4) Tree with only right child
     @Test
     public void testTreeCase4Traverse() {
@@ -130,6 +163,11 @@ public class UnitTesting {
         assertEquals("C A ", catcherStream.toString());
     }
 
+    //Height test
+
+    //Number of nodes test
+
+    
     //Case 5) Tree with both left and right children
     @Test
     public void testTreeCase5Traverse() {
@@ -149,6 +187,11 @@ public class UnitTesting {
         assertEquals("B C A ", catcherStream.toString());
     }
 
+    //Height test
+
+    //Number of nodes test
+
+    
 
     //Unit Cases of trees of height >= 3 (complex cases all built off of complete binary tree of height = 2):
     //Case 6) Left Subtree: only left child                   Right Subtree: no children
