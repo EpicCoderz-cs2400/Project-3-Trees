@@ -34,10 +34,10 @@ public class UnitTesting {
     //Case 18) Left Subtree: only left child                   Right Subtree: both left and right children
     //Case 19) Left Subtree: only right child                  Right Subtree: both left and right children
     //Case 20) Left Subtree: both left and right children      Right Subtree: both left and right children
-    //Case 21) Left Subtree: both left and right children      Right Subtree: both left and right children
-    //Case 22) Left Subtree: both left and right children      Right Subtree: both left and right children
-    //Case 23) Left Subtree: both left and right children      Right Subtree: both left and right children
-    //Case 24) Left Subtree: both left and right children      Right Subtree: both left and right children
+    //Case 21) Left Subtree: only left child                   No Right Subtree 
+    //Case 22) Left Subtree: only right child                  No Right Subtree 
+    //Case 23) No Left Subtree                                 Right Subtree: only left child
+    //Case 24) No Left Subtree                                 Right Subtree: only right child
 
 
     //Creating trees for testing
