@@ -42,5 +42,27 @@ public class UnitTesting {
 
     //@Test
 
-    
+    //Unit Cases of trees up to height < 3 (simple cases):
+    //Empty Tree
+    //Tree with no children
+    //Tree with only left child
+    //Tree with only right child
+    //Tree with both left and right children
+
+    //Unit Cases of trees of height >= 3 (complex cases all built off of complete binary tree of height = 2):
+    //Left Subtree: only left child                   Right Subtree: no children
+    //Left Subtree: only right child                  Right Subtree: no children
+    //Left Subtree: both left and right children      Right Subtree: no children
+    //Left Subtree: no children                       Right Subtree: only left child
+    //Left Subtree: no children                       Right Subtree: only right child
+    //Left Subtree: no children                       Right Subtree: both left and right children
+    //Left Subtree: only left child                   Right Subtree: only left child
+    //Left Subtree: only right child                  Right Subtree: only right child
+    //Left Subtree: only left child                   Right Subtree: only right child
+    //Left Subtree: only right child                  Right Subtree: only left child
+    //Left Subtree: both left and right children      Right Subtree: only left child
+    //Left Subtree: both left and right children      Right Subtree: only right child
+    //Left Subtree: only left child                   Right Subtree: both left and right children
+    //Left Subtree: only right child                  Right Subtree: both left and right children
+    //Left Subtree: both left and right children      Right Subtree: both left and right children
 }
