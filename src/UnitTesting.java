@@ -9,44 +9,6 @@ import java.io.PrintStream;
 import org.junit.Test;
 
 public class UnitTesting {
-    
-    public static void main(String[] args)
-	{
-		System.out.println("1st Testing Example:");
-		BinaryTree<String> aTree = new BinaryTree<>();
-		createTree1(aTree);
-        System.out.println("(binaryTree) post-order: ");
-		aTree.postorderTraverse();
-		System.out.println("");
-    }
-    
-    //Testing a tree with only left subtree
-    public static void createTree1(BinaryTree<String> tree)
-	{ 
-        // Leaves
-		BinaryTree<String> eTree = new BinaryTree<>("E");
-
-		// Subtrees:
-		BinaryTree<String> dTree = new BinaryTree<>("D", eTree, null);
-		BinaryTree<String> cTree = new BinaryTree<>("C", dTree, null);
-		BinaryTree<String> bTree = new BinaryTree<>("B", null, cTree);
-
-		tree.setTree("A", bTree, null);
-		
-        System.out.println("\nGiven Tree:\n");
-        System.out.println("     A      ");
-        System.out.println("   /     ");
-        System.out.println("  B       ");
-        System.out.println("   \\     ");
-        System.out.println("    C     ");
-        System.out.println("   /      ");
-        System.out.println("   D        ");
-        System.out.println("  /        ");
-        System.out.println(" E        ");
-        System.out.println();
-	} // end createTree
-
-
     //Case 0) bad input
     //Unit Cases of trees up to height < 3 (simple cases):
     //Case 1) Empty Tree
@@ -112,6 +74,7 @@ public class UnitTesting {
 
 
     //Case 3) Tree with only left child
+    //Traverse test
     @Test
     public void testTreeCase3Traverse() {
         //create leaf
@@ -145,7 +108,9 @@ public class UnitTesting {
         assertEquals(2, treeCase3.getNumberOfNodes());
     }
     
+
     //Case 4) Tree with only right child
+    //Traverse test
     @Test
     public void testTreeCase4Traverse() {
         //create leaf
@@ -164,11 +129,24 @@ public class UnitTesting {
     }
 
     //Height test
+    @Test
+    public void testTreeCase4Height(){
+        BinaryTree<String>  cTree = new BinaryTree<>("C");
+        BinaryTree<String> treeCase4 = new BinaryTree<>("A", null, cTree);
+        assertEquals(2, treeCase4.getHeight());
+    }
 
     //Number of nodes test
+    @Test
+    public void testTreeCase4Nodes(){
+        BinaryTree<String>  cTree = new BinaryTree<>("C");
+        BinaryTree<String> treeCase4 = new BinaryTree<>("A", null, cTree);
+        assertEquals(2, treeCase4.getNumberOfNodes());
+    }
 
     
     //Case 5) Tree with both left and right children
+    //Traverse test
     @Test
     public void testTreeCase5Traverse() {
         //create leaf
@@ -188,8 +166,22 @@ public class UnitTesting {
     }
 
     //Height test
+    @Test
+    public void testTreeCase5Height(){
+        BinaryTree<String>  bTree = new BinaryTree<>("B");
+        BinaryTree<String>  cTree = new BinaryTree<>("C");
+        BinaryTree<String> treeCase5 = new BinaryTree<>("A", bTree, cTree);
+        assertEquals(2, treeCase5.getHeight());
+    }
 
     //Number of nodes test
+    @Test
+    public void testTreeCase5Nodes(){
+        BinaryTree<String>  bTree = new BinaryTree<>("B");
+        BinaryTree<String>  cTree = new BinaryTree<>("C");
+        BinaryTree<String> treeCase5 = new BinaryTree<>("A", bTree, cTree);
+        assertEquals(3, treeCase5.getNumberOfNodes());
+    }
 
     
 
